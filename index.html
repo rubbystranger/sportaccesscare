@@ -76,14 +76,14 @@
     <div class="page-wrapper">
         <header class="main-header">
             <div class="main-menu__top">
-                <div class="container">
+                <!-- <div class="container">
                     <div class="main-menu__top-inner">
-                        <p class="main-menu__top-text">Welcome to SportCare Access – Empowering Communities Through Sport</p>
+                        <p class="main-menu__top-text">Welcome to Sport Care Access – Empowering Communities Through Sport</p>
                         <div class="main-menu__top-btn">
-                            <a href="#"><span class="icon-right-arrow1"></span> Support Our Mission</a>
+                            <a href="https://donorbox.org/help-us-make-a-difference-948652"><span class="icon-right-arrow1"></span> Support Our Mission</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <nav class="main-menu">
                 <div class="main-menu__wrapper">
@@ -125,7 +125,7 @@
                                     <a href="#"><span class="icon-people"></span></a>
                                 </div>
                                 <div class="main-menu__btn-box">
-                                    <a href="#" class="main-menu__btn thm-btn"><span>Donation
+                                    <a href="https://donorbox.org/help-us-make-a-difference-948652" class="main-menu__btn thm-btn"><span>Donation
                                             Today</span><i class="icon-arrow-up"></i></a>
                                 </div>
                             </div>
@@ -227,7 +227,7 @@
                             </p>
 
                             <div class="main-slider__btn-box">
-                                <a href="#" class="main-slider__btn thm-btn">
+                                <a href="https://donorbox.org/help-us-make-a-difference-948652" class="main-slider__btn thm-btn">
                                     <span>Donate Today</span>
                                     <i class="icon-arrow-up"></i>
                                 </a>
@@ -466,20 +466,45 @@
                     </div>
 
                 </div>
+                
+
 
                 <div class="services-one__video">
-                    <div class="services-one__video-img">
-                        <img src="assets/images/services/services-one-video-img.jpg" alt="">
+    <div class="services-one__video-img">
+        <div id="videoWrapper">
+            <img src="assets/images/services/services-one-video-img.jpg" alt="Video Thumbnail">
 
-                        <div class="services-one__video-link">
-                            <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                <div class="services-one__video-icon">
-                                    <span>Play</span>
-                                    <i class="ripple"></i>
-                                </div>
-                            </a>
-                        </div>
+            <div class="services-one__video-link">
+                <a href="#" id="playVideo">
+                    <div class="services-one__video-icon">
+                        <span>Play</span>
+                        <i class="ripple"></i>
                     </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById("playVideo").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.getElementById("videoWrapper").innerHTML = `
+        <iframe
+            width="100%"
+            height="500"
+            src="https://www.youtube.com/embed/PUO4p_Kaj7c?autoplay=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    `;
+});
+</script>
+
+
 
                     <div class="services-one__audio-box">
 
@@ -666,7 +691,7 @@
                                 <img src="assets/images/shapes/counter-one-shape-1.png" alt="">
                             </div>
                             <div class="counter-one__count count-box">
-                                <h3 class="count-text" data-stop="20" data-speed="1500">00</h3>
+                                <h3 class="count-text" data-stop="7.5" data-speed="1500">00</h3>
                                 <span>K+</span>
                             </div>
                             <p class="counter-one__count-text">Athletes Supported</p>
@@ -681,7 +706,7 @@
                                 <img src="assets/images/shapes/counter-one-shape-2.png" alt="">
                             </div>
                             <div class="counter-one__count count-box">
-                                <h3 class="count-text" data-stop="45" data-speed="1500">00</h3>
+                                <h3 class="count-text" data-stop="8" data-speed="1500">00</h3>
                                 <span>+</span>
                             </div>
                             <p class="counter-one__count-text">Communities Reached</p>
@@ -696,8 +721,8 @@
                                 <img src="assets/images/shapes/counter-one-shape-3.png" alt="">
                             </div>
                             <div class="counter-one__count count-box">
-                                <h3 class="count-text" data-stop="12" data-speed="1500">00</h3>
-                                <span>K+</span>
+                                <h3 class="count-text" data-stop="45" data-speed="1500">00</h3>
+                                <span></span>
                             </div>
                             <p class="counter-one__count-text">Volunteers & Coaches</p>
                         </div>
@@ -711,7 +736,7 @@
                                 <img src="assets/images/shapes/counter-one-shape-4.png" alt="">
                             </div>
                             <div class="counter-one__count count-box">
-                                <h3 class="count-text" data-stop="850" data-speed="1500">00</h3>
+                                <h3 class="count-text" data-stop="5" data-speed="1500">00</h3>
                                 <span>+</span>
                             </div>
                             <p class="counter-one__count-text">Sports Programs Funded</p>
@@ -770,52 +795,25 @@
                                                                 <img src="assets/images/courses/courses-1-1.jpg" alt="">
                                                             </div>
                                                             <div class="courses-one__tag">
-                                                                <span>Sports Medicine</span>
+                                                                <span>International Development</span>
                                                             </div>
                                                         </div>
                                                         <div class="courses-one__content">
                                                             <h3 class="courses-one__title"><a
-                                                                    href="courses-details.html">Providing Quality Sports Healthcare and Rehabilitation.</a></h3>
-                                                            <p class="courses-one__text">Sport Access Care delivers accessible medical support, rehabilitation, and wellness services to athletes and underserved communities.</p>
+                                                                    href="courses-details.html">Expanding Cricket in Africa & Europe</a></h3>
+                                                            <p class="courses-one__text">Kinshasa, Democratic Republic of Congo (2013) Calais, Paris & Dunkirk, France (2014)</p>
                                                             <div class="courses-one__rised-and-goals">
                                                                 <div class="courses-one__raised">
-                                                                    <h4>$50,00<span>Raised</span></h4>
+                                                                    <h4>2013<span>Congo</span></h4>
                                                                 </div>
                                                                 <div class="courses-one__goals">
-                                                                    <h4>$50,00<span>Goal</span></h4>
+                                                                    <h4>2014<span>Africa</span></h4>
                                                                 </div>
                                                             </div>
                                                             <div class="progress-levels">
-                                                                <!--Skill Box-->
-                                                                <div class="progress-box">
-                                                                    <div class="inner count-box">
-                                                                        <div class="bar">
-                                                                            <div class="bar-innner">
-                                                                                <div class="skill-percent">
-                                                                                    <span class="count-text"
-                                                                                        data-speed="3000"
-                                                                                        data-stop="75">0</span>
-                                                                                    <span class="percent">%</span>
-                                                                                    <div
-                                                                                        class="progress-box__progress-shape-1">
-                                                                                        <img src="assets/images/shapes/courses-one-progress-shape-1.png"
-                                                                                            alt="">
-                                                                                    </div>
-                                                                                    <div
-                                                                                        class="progress-box__progress-shape-2">
-                                                                                        <img src="assets/images/shapes/courses-one-progress-shape-2.png"
-                                                                                            alt="">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="bar-fill" data-percent="75">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -831,19 +829,19 @@
                                                                 <img src="assets/images/courses/courses-1-2.jpg" alt="">
                                                             </div>
                                                             <div class="courses-one__tag">
-                                                                <span>Education</span>
+                                                                <span>Youth Cricket</span>
                                                             </div>
                                                         </div>
                                                         <div class="courses-one__content">
                                                             <h3 class="courses-one__title"><a
-                                                                    href="courses-details.html">Developing Young Athletes Through Education.</a></h3>
-                                                            <p class="courses-one__text">We combine academic support with sports development to equip young people with knowledge, discipline, and leadership skills.</p>
+                                                                    href="courses-details.html">Building Opportunities Through Sport</a></h3>
+                                                            <p class="courses-one__text">Development Cricket Project – Knysna. Development Cricket Project – East London</p>
                                                             <div class="courses-one__rised-and-goals">
                                                                 <div class="courses-one__raised">
-                                                                    <h4>$50,00<span>Raised</span></h4>
+                                                                    <h4>2023<span>South Africa</span></h4>
                                                                 </div>
                                                                 <div class="courses-one__goals">
-                                                                    <h4>$50,00<span>Goal</span></h4>
+                                                                    <h4>2024<span>South Africa</span></h4>
                                                                 </div>
                                                             </div>
                                                             <div class="progress-levels">
@@ -876,7 +874,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -937,7 +935,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1009,7 +1007,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1070,7 +1068,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1131,7 +1129,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1199,7 +1197,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1257,7 +1255,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1315,7 +1313,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1381,7 +1379,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
                                                         </div>
@@ -1436,7 +1434,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
                                                         </div>
@@ -1491,7 +1489,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
                                                         </div>
@@ -1561,7 +1559,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1622,7 +1620,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1683,7 +1681,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="courses-one__btn-box">
-                                                                <a href="courses-details.html"
+                                                                <a href="https://donorbox.org/help-us-make-a-difference-948652"
                                                                     class="courses-one__btn thm-btn"><span>Donate
                                                                         Now</span><i class="icon-arrow-up"></i></a>
                                                             </div>
@@ -1716,7 +1714,7 @@
                     <div class="col-xl-7 col-lg-7 wow fadeInUp" data-wow-delay=".3s">
                         <div class="video-one__left">
                             <div class="video-one__video-link">
-                                <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
+                                <a href="https://youtube.com/shorts/c1N0UANgOoo?feature=share" class="video-popup">
                                     <div class="video-one__video-icon">
                                         <span>Play</span>
                                         <i class="ripple"></i>
@@ -1740,7 +1738,7 @@
                                 <h3 class="video-one__need-help-dolor">$100</h3>
                                 <p class="video-one__need-help-donate">Donations Collected</p>
                                 <div class="video-one__need-help-btn-box">
-                                    <a href="courses-details.html" class="video-one__btn thm-btn"><span>Donate
+                                    <a href="https://donorbox.org/help-us-make-a-difference-948652" class="video-one__btn thm-btn"><span>Donate
                                             Now</span><i class="icon-arrow-up"></i></a>
                                 </div>
                             </div>
@@ -1799,8 +1797,8 @@
                         <div class="section-title__tagline-shape"></div>
                         <span class="section-title__tagline">Our Team Member</span>
                     </div>
-                    <h2 class="section-title__title title-animation">Events Schedule Upcoming
-                        <br> Events.</h2>
+                    <!-- <h2 class="section-title__title title-animation">Events Schedule Upcoming
+                        <br> Events.</h2> -->
                 </div>
                 <div class="row">
                     <!--Team One Single Start-->
@@ -1827,7 +1825,7 @@
                                     </div>
                                 </div>
                                 <div class="team-one__title-box">
-                                    <h3><a href="team.html">Mr. Beningfiled</a></h3>
+                                    <h3><a href="team.html">Mr Q.C Beningfd</a></h3>
                                     <p>C.E.O</p>
                                 </div>
                             </div>
@@ -2051,10 +2049,10 @@
                                     <h2 class="section-title__title title-animation">Frequently Asked
                                         <br> Questions.</h2>
                                 </div>
-                                <div class="faq-one__btn-box">
+                                <!-- <div class="faq-one__btn-box">
                                     <a href="faq.html" class="faq-one__btn thm-btn"><span>More Questions</span><i
                                             class="icon-arrow-up"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-6">
@@ -2157,14 +2155,14 @@
                                     <p class="footer-widget__about-text">Creating opportunities through sports,
                                         <br> one child, one community at a time.</p>
                                     <div class="site-footer__social">
-                                        <a href="#"><i class="icon-facebook"></i></a>
-                                        <a href="#"><i class="icon-twitter"></i></a>
-                                        <a href="#"><i class="icon-instagram"></i></a>
-                                        <a href="#"><i class="icon-youtube"></i></a>
+                                        <a href="https://www.facebook.com/share/1BASJnUx9f/"><i class="icon-facebook"></i></a>
+                                        <a href="https://x.com/sportcareaccess"><i class="icon-twitter"></i></a>
+                                        <a href="https://instagram.com/sportcareaccess"><i class="icon-instagram"></i></a>
+                                        <a href="https://youtube.com/@africareactaid2470"><i class="icon-youtube"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <!-- <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="footer-widget__links">
                                     <h4 class="footer-widget__title">Quick links</h4>
                                     <ul class="footer-widget__links-list list-unstyled">
@@ -2175,14 +2173,14 @@
                                         <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="footer-widget__contact">
                                     <h3 class="footer-widget__title">Contact Us</h3>
                                     <ul class="footer-widget__contact-list list-unstyled">
                                         <li>
-                                            <p>4517 Washington Ave. Manchester,
-                                                Kentucky 39495</p>
+                                            <p>Matrix Business Centre, Highview House,
+                                                167 Station Road, Edgware,Middlesex, London,</p>
                                         </li>
                                         <!-- <li>
                                             <p><a href="tel:2195550114">(219) 555-0114</a></p>
